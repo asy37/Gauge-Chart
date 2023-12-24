@@ -111,39 +111,38 @@ const Gauge = ({ value }) => {
               y="40"
               textAnchor="middle"
               fontSize="10"
-              // transform={`rotate(${tickRotation} 100, 100)`}
             >
-              <tspan x="60" y="150">
+              <tspan fontWeight={value === -100 ? "bold" : "normal"} x="60" y="150">
                 -100
               </tspan>
-              <tspan x="45" y="125">
+              <tspan fontWeight={value === -80 ? "bold" : "normal"} x="45" y="125">
                 -80
               </tspan>
-              <tspan x="40" y="95">
+              <tspan fontWeight={value === -60 ? "bold" : "normal"}x="40" y="95">
                 -60
               </tspan>
-              <tspan x="50" y="65">
+              <tspan fontWeight={value === -40 ? "bold" : "normal"} x="50" y="65">
                 -40
               </tspan>
-              <tspan x="70" y="45">
+              <tspan fontWeight={value === -20 ? "bold" : "normal"} x="70" y="45">
                 -20
               </tspan>
-              <tspan x="100" y="40">
+              <tspan fontWeight={value === 0 ? "bold" : "normal"} x="100" y="40">
                 0
               </tspan>
-              <tspan x="130" y="45">
+              <tspan  fontWeight={value === 20 ? "bold" : "normal"} x="130" y="45">
                 20
               </tspan>
-              <tspan x="150" y="65">
+              <tspan fontWeight={value === 40 ? "bold" : "normal"} x="150" y="65">
                 40
               </tspan>
-              <tspan x="160" y="95">
+              <tspan fontWeight={value === 60 ? "bold" : "normal"} x="160" y="95">
                 60
               </tspan>
-              <tspan x="155" y="125">
+              <tspan fontWeight={value === 80 ? "bold" : "normal"} x="155" y="125">
                 80
               </tspan>
-              <tspan x="140" y="150">
+              <tspan fontWeight={value === 100 ? "bold" : "normal"} x="140" y="150">
                 100
               </tspan>
             </text>
