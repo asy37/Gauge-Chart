@@ -15,10 +15,10 @@ const Gauge = ({ value }) => {
 
   useEffect(() => {
     const targetRotation = calculateRotation(value, minValue, maxValue);
-    const animationDuration = 300; // Animasyon süresi, burada 1 saniye olarak belirledim
-    const interval = 20; // İterasyon süresi
-    const iterations = animationDuration / interval; // İterasyon sayısı
-    const rotationChange = (targetRotation - rotation) / iterations; // Her iterasyonda değişim miktarı
+    const animationDuration = 300; 
+    const interval = 20; 
+    const iterations = animationDuration / interval;
+    const rotationChange = (targetRotation - rotation) / iterations; 
 
     let currentRotation = rotation;
     const intervalId = setInterval(() => {
@@ -26,12 +26,12 @@ const Gauge = ({ value }) => {
         currentRotation += rotationChange;
         setRotation(currentRotation);
       } else {
-        setRotation(targetRotation); // Hedef rotasyona ulaşınca durdur
+        setRotation(targetRotation); 
         clearInterval(intervalId);
       }
     }, interval);
 
-    return () => clearInterval(intervalId); // Temizlik için interval'i temizle
+    return () => clearInterval(intervalId); 
   }, [value, minValue, maxValue, rotation]);
 
   const specialIndexes = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
@@ -91,7 +91,6 @@ const Gauge = ({ value }) => {
         const lineStroke = [0, 5, 10, 15, 20, 25].includes(index)
           ? "#FEDC00"
           : "#F6F6F5";
-        const specialValue = specialValues[specialIndexes.indexOf(index)];
 
         return (
           <g key={index}>

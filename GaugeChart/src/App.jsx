@@ -1,7 +1,7 @@
 import Gauge from "./Gauge"
 
 function App() {
-  const value = -20
+  const value = 20
 
   return (
    <Gauge value={value}/>
